@@ -4,7 +4,7 @@
 
 import setuptools
 
-from {{cookiecutter.package_name}} import __project__, __version__
+import {{cookiecutter.package_name}}
 
 import os
 if os.path.exists('README.rst'):
@@ -15,8 +15,8 @@ CHANGES = open('CHANGES.md').read()
 
 
 setuptools.setup(
-    name=__project__,
-    version=__version__,
+    name=_{{cookiecutter.package_name}}._project__,
+    version={{cookiecutter.package_name}}.__version__,
 
     description="{{cookiecutter.project_name}} is a Python 3 package template.",
     url='https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.github_repo}}',
